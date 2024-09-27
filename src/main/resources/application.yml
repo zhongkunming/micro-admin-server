@@ -1,0 +1,42 @@
+server:
+  port: 7001
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: micro-admin-server
+  mvc:
+    format:
+      date: yyyy-MM-dd
+      time: HH:mm:ss
+      date-time: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  datasource:
+    url:
+    driver-class-name:
+    username:
+    password:
+  data:
+    redis:
+      host:
+      port:
+      password:
+        
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    path: ./logs
+  level:
+    root: info
+  include-application-name: false
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss.SSS
+
