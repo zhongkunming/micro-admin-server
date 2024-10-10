@@ -45,16 +45,12 @@ public class PageResult<R> implements Serializable {
 
     public static <T, R> PageResult<T> trans(IPage<R> page, Class<T> clazz) {
         List<R> records = page.getRecords();
-        return trans0(page, BeanUtils.copyToList(records, clazz));
-    }
-
-    public static <T, R> PageResult<T> trans0(IPage<R> page, List<T> list) {
         PageResult<T> result = new PageResult<>();
         result.setPages(page.getPages());
         result.setTotal(page.getTotal());
         result.setSize(page.getSize());
         result.setCurrent(page.getCurrent());
-        result.setRecords(list);
+        result.setRecords(BeanUtils.copyToList(records, clazz));
         return result;
     }
 }
