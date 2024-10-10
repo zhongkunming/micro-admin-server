@@ -23,9 +23,9 @@ public class JwtUtils {
 
     public static final String HEADER_AUTH = "Authorization";
 
-    public static final String HEADER_AUTH_PREFIX = "Bearer ";
-
     public static final String PARAM_AUTH = "token";
+
+    public static final String HEADER_AUTH_PREFIX = "Bearer ";
 
     public static final String TOKEN = "Token";
 

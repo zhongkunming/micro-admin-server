@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class DemoController {
 
-    @PostMapping("/list")
-    @Operation(summary = "查询")
-    public Result<PageResult<Void>> list() {
+    @PostMapping("/page")
+    @Operation(summary = "分页查询")
+    public Result<PageResult<Void>> page() {
         return Result.success();
     }
 
